@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "197085349922",
+    "firebase_url": "https://comp-6442-touchfish-default-rtdb.firebaseio.com",
+    "project_id": "comp-6442-touchfish",
+    "storage_bucket": "comp-6442-touchfish.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197085349922:android:4caf1daab44c6f27dfa27b",
+        "android_client_info": {
+          "package_name": "touchfish.socialgood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197085349922-5tjvf58jm09vos4vs66kukmkvdrkvu14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "touchfish.socialgood",
+            "certificate_hash": "ba0b06e4cf0a359626cd5caa74a1f24e22d38ef8"
+          }
+        },
+        {
+          "client_id": "197085349922-mtnef9lpeadlnmtlvabnpnscum859hc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2i3zoeZxnFYwjHjqf9yvt82sLzK4PYYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197085349922-mtnef9lpeadlnmtlvabnpnscum859hc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
