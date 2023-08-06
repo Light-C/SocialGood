@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fillViewport="true"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        android:background="@android:color/white"
+        android:clickable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/card_f"/>
+
+            <TextView
+                android:id="@+id/trend"
+                android:text="Today's Trend"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="36sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"/>
+
+            <ImageSwitcher
+                android:id="@+id/ad_switcher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/trend"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                android:background="@drawable/image_f">
+            </ImageSwitcher>
+
+            <TextView
+                android:id="@+id/discovery"
+                android:text="Discovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/ad_switcher"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"/>
+
+            <TextView
+                android:id="@+id/lr"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#666666"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/discovery"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"/>
+
+            <GridLayout
+                android:id="@+id/activity_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="100dp"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/lr">
+
+            </GridLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/layout_text"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/bottom_home"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_home_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/bottom_shop"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_dashboard_black_24dp"/>
+
+        <ImageButton
+            android:id="@+id/bottom_mine"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_notifications_black_24dp"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_black_24dp"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_black_24dp"
+            android:text="SHOP"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_black_24dp"
+            android:text="MINE"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

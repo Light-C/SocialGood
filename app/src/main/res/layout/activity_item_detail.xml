@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:contentDescription="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ItemDetailActivity">
+
+            <ImageView
+                android:id="@+id/productDetailPicture"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food"
+                app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/productDetailBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline1"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/card_f" />
+
+            <TextView
+                android:id="@+id/productDetailName"
+                android:text="Lobster"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/guideline2"/>
+
+            <TextView
+                android:id="@+id/providedBy"
+                android:text="Provided by "
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/productDetailName"/>
+
+            <TextView
+                android:id="@+id/productDetailProvider"
+                android:text="Happy Farm"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/providedBy"
+                app:layout_constraintTop_toBottomOf="@+id/productDetailName"/>
+
+            <TextView
+                android:id="@+id/productDetailPrice"
+                android:text="50"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/priceUnit"
+                app:layout_constraintTop_toBottomOf="@+id/guideline2"/>
+
+            <TextView
+                android:id="@+id/priceUnit"
+                android:text=" C"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/guideline2"/>
+
+            <TextView
+                android:id="@+id/productDetailDescription"
+                android:text="HERE ARE A FEW DESCRIPTIONS FOR LOBSTER "
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/guideline3"/>
+
+            <TextView
+                android:id="@+id/productDetailAmount"
+                android:text="10"
+                android:textSize="16sp"
+                android:textColor="@color/darkgrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/productDetailDescription"/>
+
+            <TextView
+                android:text=" Left In Stock "
+                android:textSize="16sp"
+                android:textColor="@color/darkgrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/productDetailAmount"
+                app:layout_constraintTop_toBottomOf="@+id/productDetailDescription"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/productDetailBuy"
+        android:text="buy"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/Guideline6" />
+
+    <ImageButton
+        android:id="@+id/productDetailBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/arrow_back"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/Guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/Guideline8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Guideline7"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

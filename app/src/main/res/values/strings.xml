@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Social Good</string>
+    <string name="title_home">Home</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_mine">Mine</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_welcome">WELCOME</string>
+    <string name="background2">background2</string>
+    <string name="background">background</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="log_in_user">Log in for Users</string>
+    <string name="log_in_pub">Log in for Publishers</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="not_have_account_yet_sign_up_here">Not have account yet? Sign up here</string>
+    <string name="back">back</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="sign_up">Publisher Sign Up</string>
+    <string name="sign_up_2">User Sign Up</string>
+    <string name="logo">LOGO</string>
+    <string name="username">User Name</string>
+    <string name="error_weak_password">error password</string>
+    <string name="error_invalid_email">error email</string>
+    <string name="error_user_exists">error user</string>
+</resources>

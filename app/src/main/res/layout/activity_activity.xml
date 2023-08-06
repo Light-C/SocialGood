@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        android:fillViewport="true"
+        android:contentDescription="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.shop.ItemDetailFragment">
+
+            <ImageView
+                android:id="@+id/activityDetailPicture"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tree"
+                app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/activityDetailBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline1"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/card_f"/>
+
+            <TextView
+                android:id="@+id/activityDetailName"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/guideline2"/>
+
+            <TextView
+                android:id="@+id/organizedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Organized by "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/activityDetailName" />
+
+            <TextView
+                android:id="@+id/activityDetailProvider"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/organizedBy"
+                app:layout_constraintTop_toBottomOf="@+id/activityDetailName"/>
+
+            <TextView
+                android:id="@+id/credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit: "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/organizedBy" />
+
+            <TextView
+                android:id="@+id/activityCredit"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@id/credit"
+                app:layout_constraintTop_toBottomOf="@+id/organizedBy"/>
+
+            <TextView
+                android:id="@+id/StartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Start At: "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/credit" />
+
+            <TextView
+                android:id="@+id/activityDetailStartDate"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/StartDate"
+                app:layout_constraintTop_toBottomOf="@+id/credit"/>
+
+            <TextView
+                android:id="@+id/EndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="End At:   "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/activityDetailStartDate" />
+
+            <TextView
+                android:id="@+id/activityDetailEndDate"
+                android:textStyle="italic"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/EndDate"
+                app:layout_constraintTop_toBottomOf="@+id/activityDetailStartDate"/>
+
+            <TextView
+                android:id="@+id/activityDetailDescription"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideline"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/activityDetailEndDate"/>
+
+            <ImageButton
+                android:id="@+id/likeButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/ic_like"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintBottom_toTopOf="@+id/likeNumber" />
+
+            <TextView
+                android:id="@+id/likeNumber"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#000000"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/dislikeButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/ic_dislike"
+                app:layout_constraintStart_toEndOf="@+id/likeButton"
+                app:layout_constraintBottom_toTopOf="@+id/dislikeNumber" />
+
+            <TextView
+                android:id="@+id/dislikeNumber"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#000000"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/dislikeButton"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <Button
+                android:id="@+id/activityDetailJoin"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:text="JOIN IN"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/activityDetailDescription"
+                app:layout_constraintStart_toEndOf="@+id/dislikeButton"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/backToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintBottom_toTopOf="@+id/Guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/Guideline8"
+        app:layout_constraintStart_toStartOf="@+id/Guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

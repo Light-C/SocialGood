@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景颜色 -->
+    <solid android:color="@color/grey" />
+
+    <!-- 边框的宽度和颜色颜色 -->
+
+
+    <!-- padding：Button里面的文字与Button边界的间隔 -->
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp"
+        />
+
+    <!-- 设置圆角矩形
+         radius:圆角弧度，核心代码
+         topLeftRadius:  左上角圆角弧度
+         topRightRadius:  右上角圆角弧度
+         bottomRightRadius:  右下角圆角弧度
+         bottomLeftRadius:  左下角圆角弧度
+    -->
+
+    <corners
+        android:radius="10dp"/>
+    <!--        android:topLeftRadius="0dp"-->
+    <!--        android:topRightRadius="10dp"-->
+    <!--        android:bottomRightRadius="0dp"-->
+    <!--        android:bottomLeftRadius="10dp" -->
+
+
+    <!--    ————————————————-->
+    <!--    版权声明：本文为CSDN博主「JSCloud」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。-->
+    <!--    原文链接：https://blog.csdn.net/dreamer2333/article/details/90721810-->
+    <!--    https://blog.csdn.net/jackiesky1206/article/details/120195042-->
+</shape>
